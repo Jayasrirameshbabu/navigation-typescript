@@ -242,12 +242,12 @@ const OtpScreen = (props: OtpScreenTypes) => {
               textInputStyle={styles.otpInputText}
               inputCount={6}
             />
-            <View style={styles.resendOtp}>
-              <Text style={styles.title}>Did not Receive OTP?</Text>
-              <Text style={styles.title}>00.30 s</Text>
-              <Pressable>
-                <Text style={styles.resendText}>RESEND OTP</Text>
-              </Pressable>
+            <View style={styles.footerContainer}>
+              <Image
+                style={styles.footerImage}
+                source={require('../assests/Images/help.png')}
+              />
+              <Text style={styles.footerText}>FORGOT PASSWORD</Text>
             </View>
             <View style={styles.buttonContainer}>
               <Pressable
@@ -322,6 +322,20 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     textDecorationLine: 'underline',
   },
+  footerContainer: {
+    flexDirection: 'row',
+    gap: 5,
+    marginTop: 20,
+  },
+  footerText: {
+    fontSize: 12,
+    fontWeight: '800',
+    color: '#000000',
+  },
+  footerImage: {
+    height: 18,
+    width: 18,
+  },
   buttonContainer: {
     backgroundColor: '#EEEEEE',
     borderRadius: 30,
@@ -330,7 +344,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
-    top: 5,
+    top: 20,
   },
   buttonInner: {
     borderRadius: 22,
