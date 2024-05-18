@@ -5,6 +5,12 @@ import WelcomeScreen from '../../screens/WelcomeScreen';
 import {stackScreens} from '../../types';
 import LoginScreen from '../../screens/LoginScreen';
 import OtpScreen from '../../screens/OtpScreen';
+import PracticeScreen from '../../screens/PracticeScreen';
+import ForgotPassword from '../../screens/ForgotPassword';
+import FlexLayout from '../../screens/FlexLayout';
+import PaymentsScreen from '../../screens/PaymentsScreen';
+import WishListScreen from '../../screens/WishListScreen';
+
 // import Home from '../../screens/Home';
 
 // import Screen1 from '../../screens/Screen1';
@@ -24,10 +30,58 @@ import OtpScreen from '../../screens/OtpScreen';
 const Stack = createNativeStackNavigator<stackScreens>();
 const AllScreens = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="WelcomeScreen">
       <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
-      <Stack.Screen name="LoginScreen" component={LoginScreen} />
-      <Stack.Screen name="OtpScreen" component={OtpScreen} />
+      <Stack.Screen
+        name="LoginScreen"
+        component={LoginScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="OtpScreen"
+        component={OtpScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="ForgotPasswordScreen"
+        component={ForgotPassword}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="PaymentsScreen"
+        component={PaymentsScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="PracticeScreen"
+        component={PracticeScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="FlexLayout"
+        component={FlexLayout}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="WishListScreen"
+        component={WishListScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+
       {/* <Stack.Screen name="FetchData" component={FetchData} />
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Screen1" component={Screen1} />
