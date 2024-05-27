@@ -1,10 +1,12 @@
 import React from 'react';
-import AllScreens from './Navigation/Stack/AllScreens';
 import {NavigationContainer} from '@react-navigation/native';
+import AuthNavigation from './Navigation/Stack/authNavigation';
+// import HomeNavigation from './Navigation/Stack/homeNavigation';
 const App = () => {
   return (
     <NavigationContainer>
-      <AllScreens />
+      <AuthNavigation />
+      {/* <HomeNavigation /> */}
     </NavigationContainer>
   );
 };
